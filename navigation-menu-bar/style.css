@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    display: flex;
+    background-color: darkcyan;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-grow: 1;
+}
+nav h2{
+    color: white;
+    padding-left: 2rem;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+ul li{
+    cursor: pointer;
+    padding: 0.5rem;
+}
+nav ul li:hover{
+    background-color: #555;
+    color: white;
+}
+li a{
+    color: white
+}
+.sec1{
+    background-image: url(flower1.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+.sec2{
+    background-image: url(flower2.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+
+@media all and (max-width: 600px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li{
+        text-align: center;
+    }
+}
