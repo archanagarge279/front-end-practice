@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('i')[0].addEventListener("click", function(){
+          document.querySelector('ul').classList.toggle('ul_show');
+          document.querySelector('section').classList.toggle('slide_image');
+        });
+        document.querySelectorAll('li').forEach(function(li) {
+          li.addEventListener("click", function() {
+            this.classList.add('active');
+            var siblings = Array.from(this.parentNode.children);
+            siblings.forEach(function(sibling) {
+              if (sibling !== this) {
+                sibling.classList.remove('active');
+              }
+            }, this);
+          });
+        });
+
+        // document.getElementById("arrow").addEventListener("click", function(){
+        //     getElementsbyTagName("html")[0].documentElement.scrollTop = 0;
+        //     getElementsbyTagName("html")[0].body.scrollTop = 0;
+        // })
+
+      })
+
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                var ele = document.getElementById("arrow");
+                ele.style.opacity = 1;
+                ele.style.pointerEvents = "auto";
+                ele.style.cursor = "pointer";
+            } 
+            else {
+                document.getElementById("arrow").style.opacity = 0;
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li class="contact"><a href="#contact">Contact</a></li>
+    </ul>
+    <section>
+      <i class="fa fas fa-bars" id="bar" style="font-size:40px;"></i>
+      <div class="sec1"></div>
+      <h1 id="about">About Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea et ducimus modi sit, natus quam voluptate, eos rem assumenda enim reprehenderit delectus deserunt a error voluptas ullam voluptatibus aut atque.</p>
+      <div class="sec2"></div>
+      <h1 id="portfolio">Portfolio Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quasi eos ea totam, vitae, molestiae animi, illo rerum autem alias quae voluptates assumenda provident quis. Numquam suscipit aliquam delectus laborum?</p>
+      <div class="sec3"></div>
+      <h1 id="gallery">Gallery Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid cupiditate at eveniet, magnam laboriosam voluptas maxime culpa tempore quae dolor iste id libero eius non fugiat accusamus harum quas.</p>
+      <div class="sec4"></div>
+      <h1 id="services">Services Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aspernatur impedit, ipsa ut explicabo earum voluptatem optio error quidem harum ratione blanditiis fugit quis obcaecati commodi repellat maxime dolor quibusdam.</p>
+      <div class="sec5"></div>
+      <h1 id="feedback">Feedback Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui explicabo est modi omnis, distinctio impedit possimus, necessitatibus repudiandae quidem sit ab. Fuga, atque amet odio dolorum quod beatae dolor est.</p>
+      <div class="sec6"></div>
+      <h1 id="contact">Contact Section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem quaerat aliquid pariatur iusto rerum ratione voluptate mollitia cumque natus! Suscipit debitis veritatis perferendis hic iste pariatur adipisci velit illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate enim rem quasi cumque similique deleniti cum, facere in, tempora iure obcaecati ea quae mollitia recusandae iusto consequatur vitae perspiciatis. Maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos labore unde mollitia sunt totam assumenda, earum rerum eaque fuga aperiam nam enim inventore quidem, amet ducimus natus in soluta?</p>
+      <a href="#"><i class="fa fa-chevron-circle-up" id="arrow" style="font-size:40px; color: rgb(25, 62, 226); position: fixed; bottom: 0; right:0; margin-bottom: 30px; margin-right: 40px;opacity: 0;">
+      </i></a>
+    </section>
+  </body>
+</html>

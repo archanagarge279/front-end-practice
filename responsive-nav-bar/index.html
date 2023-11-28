@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementsByTagName('i')[0].addEventListener("click", function(){
+          document.querySelector('ul').classList.toggle("ul_show");
+          var ulEle = document.querySelector('ul');
+          
+          if(ulELe.classList.contains("ul_show") && window.innerWidth>600){
+              document.querySelector('ul').style.flexDirection = "row";
+          }
+          
+        })
+
+      })
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="logobar">
+        <h2>Designx</h2>
+        <i class="fa fas fa-bars" style="color: white; font-size: 40px;"></i>
+      </div>
+      <ul class="ul">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="sec1">
+        <h1>about us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+    <div class="sec2">
+        <h1>services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </body>
+</html>

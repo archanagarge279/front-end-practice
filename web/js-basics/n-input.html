@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h3>WAP to input n numbers and log the average of those numbers.</h3>
+    <p id="nums"></p>
+    <p id="demo"></p>
+    <script>
+        let n = prompt("ter the value of n");
+        let sum = 0 ;
+        for(let i=0; i<n; i++){
+            let num = prompt("Enter each of the n value");
+            sum += parseInt(num);
+            document.getElementById("nums").innerHTML += num + ", ";
+        }
+        document.getElementById("demo").innerHTML = "The average of the given numbers is " + (sum/n);
+    </script>
+</body>
+</html>
