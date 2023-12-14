@@ -67,12 +67,45 @@
 
 // sync and async
 
-function sum(){
-    let a = 0;
-    for(let i=0; i<100; i++){
-        a += i;
+// function sum(){
+//     let a = 0;
+//     for(let i=0; i<100; i++){
+//         a += i;
+//     }
+//     console.log(a);
+// }
+// setTimeout(sum(), 5000);
+// console.log("Hello World");
+
+// function myfun(){
+//     const currDate = new Date();
+//     let myhours = currDate.getHours();
+//     let myminutes = currDate.getMinutes();
+//     let myseconds = currDate.getSeconds();  
+//     console.log(myhours + " " + myminutes +" " + myseconds + " ");
+//     setTimeout(myfun, 1000);
+// }
+// setInterval(myfun, 1000);
+
+// myfun();
+
+const fs = require('fs');
+const filepath = "sample.txt";
+// fs.readFile(filepath, 'UTF-8', (err, data)=>{
+//     if(err){
+//         console.err("Error displaying the file: ", err);
+//         return;
+//     }
+//     console.log("File data: ", data);
+// })
+// for(let i=0; i<100000000000;i++){
+//     console.log('archana');
+// }
+
+fs.writeFile(filepath, "hello world", (err)=>{
+    if(err){
+        console.error("Error writing the file: ", err);
+        return;
     }
-    console.log(a);
-}
-setTimeout(sum(), 5000);
-console.log("Hello World");
+    // console.log(fs);
+})
